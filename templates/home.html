@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>铁轨病害识别系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>铁轨病害识别系统</h1>
+        <div class="upload-form">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input">
+                    <label for="file">
+                        选择图像文件
+                    </label>
+                    <input type="file" id="file" name="file" accept="image/*">
+                </div>
+                <button type="button" class="upload-btn" onclick="uploadFile()">
+                    上传并识别
+                </button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
